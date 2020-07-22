@@ -23,6 +23,6 @@ jobs:
           command: |
             ls -al
             pwd
-          # aws lambda update-function-code --function-name MyLambdaFunction --zip-file fileb://webapp.zip
+            aws lambda update-function-code --function-name MyLambdaFunction --zip-file fileb://home/circleci/project/webapp.zip
           # aws s3 cp webapp.zip s3://codedeploy-kmvanesa-me
           # aws deploy create-deployment --application-name csye6225-lambda --deployment-group-name csye6225-lambda-deployment --description "CSYE6225" --region us-east-1 --s3-location bucket=codedeploy-kmvanesa-me,bundleType=YAML,key=webapp.zip
