@@ -23,4 +23,4 @@ jobs:
           command: |
             ls -al
             aws s3 cp webapp.zip s3://codedeploy-kmvanesa-me
-            aws deploy create-deployment --application-name csye6225-lambda --deployment-group-name csye6225-lambda-deployment --description "CSYE6225" --region us-east-1 --s3-location bucket=codedeploy-kmvanesa-me,bundleType=YAML
+            aws deploy create-deployment --application-name csye6225-lambda --deployment-group-name csye6225-lambda-deployment --description "CSYE6225" --region us-east-1 --s3-location bucket=codedeploy-kmvanesa-me,bundleType=YAML,key=webapp.zip
