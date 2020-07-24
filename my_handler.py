@@ -5,7 +5,7 @@ import uuid
 from boto3.dynamodb.conditions import Key
 def my_handler(event, context):
     message = event
-    expiryTimestamp = int(time.time() +15*60)
+    expiryTimestamp = int(time.time() +200)
     client = boto3.resource('dynamodb')
     table = client.Table("csye6225")
     username = event['Records'][0]['Sns']['MessageAttributes']['username']['Value']
