@@ -27,7 +27,7 @@ def my_handler(event, context):
         RECIPIENT = username
         AWS_REGION = "us-east-1"
         SUBJECT = "Password Reset Link"
-        BODY_TEXT = ("Your Link to Reset Password : prod.kmvanesa.me/password/{a}/{b}".format(a=username,b=token))
+        BODY_TEXT = ("Your Link to Reset Password : https://prod.kmvanesa.me/password/{a}/{b} ".format(a=username,b=token))
         CHARSET = "UTF-8"
         emailclient = boto3.client('ses',region_name=AWS_REGION)
         response = emailclient.send_email(
